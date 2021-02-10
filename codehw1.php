@@ -2,6 +2,7 @@
 <html>
 <body>
 <?php
+
 echo "<h3> Challenge 1: Correct Change </h3>";
 /*
 Input is amount paid-total amount due - given in dollar and cents (floating point)
@@ -67,11 +68,12 @@ echo "<br>";
 
 echo "<h1> Challenge 2: 99 Bottles of Beer </h1>";
 $count = 40; //$count can be changed to any integer to change the starting number of bottles
-for ($count = $count ; $count >= 0 ; --$count)  
+for ($count = $count ; $count > 0 ; --$count)  
 {    
     echo "$count bottles of beer on the wall, $count bottles of beer.
-    <br> Take one down, pass it around, " . --$count . " bottles of beer on the wall.
+    <br> Take one down, pass it around, " . ($count-1) . " bottles of beer on the wall.
     <br>";
+}
 ?>
 </body>
 </html>
