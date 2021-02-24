@@ -115,7 +115,8 @@ function tailimage()
 // create a forloop that creates array and populates it until it reaches at least the number of heads passed through the function
 function coinflip($y) { // $y is number of heads in a row
 $results = array(); 
-for ($x = 0; $x!=$y; $x++) // create array with coinflip result skipping evaluation stage until reaching at least the number passed through the function
+$z = 0;
+/* for ($x = 0; $x!=$y; $x++) // create array with coinflip result skipping evaluation stage until reaching at least the number passed through the function
 {
     $result = mt_rand(0,1); 
     $results[] = $result;
@@ -133,7 +134,7 @@ for (end($results); key($results)!==null; prev($results)) // goes through array 
     {
         ++$z; // counts how many 1s in a row
     }
-  };
+  }; */ // Used this block to begin solving the problem
 while ($z != $y) //if the number of 1s in a row is not equal to the varible passed through the function, add more to array
 {
     $result = mt_rand(0,1); //
@@ -162,11 +163,16 @@ foreach ($results as $image){ // final print out of results to get heads
     echo tailimage();
     }
 }
-echo "<br>
-<p>It took ".count($results)." flip(s) to get $y head(s) in a row.</p>"; //next stage would be add edge case of one flip
+if (count($results)==1)
+{
+    echo "<br><p>It took ".count($results)." flip to get $y heads in a row.</p>";
+}
+else{
+echo "<br><p>It took ".count($results)." flips to get $y heads in a row.</p>"; 
+}
 }
 
-echo coinflip(5);
+echo coinflip(1);
 
 ?>
 </body>
