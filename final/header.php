@@ -12,7 +12,7 @@
 <header>
     <div class="clearfix">
 	<div class="logo">
-		<a href="index.php"><img src="images/bookshelf.jpeg" style="width:200px; height:200px"></a>
+		<a href="index.php"><img src="images/bookshelf.jpeg" alt="A white bookshelf with many books and a card from the Tate Modern." style="width:200px; height:200px"></a>
 	</div>
     <div class="top">
         <h1>Origins of my Library</h1>
