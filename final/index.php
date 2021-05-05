@@ -19,7 +19,7 @@ $rows = $result->num_rows;
 
 echo "<div id='table'> 
     <table>
-    <tr><th>Title</th><th>Author(s)</th><th>Source</th><th>City</th><th>Year Acquired</th><tr>";
+    <tr><th>Title</th><th>Author(s)</th><th>Source</th><th>City</th><th>Year Acquired</th></tr>";
 while ($row =$result->fetch_assoc()){
     echo "<tr>";
     echo "<td><a href=\"viewbook.php?id=".$row["book_id"]."\">".$row["title"]."</a></td>";
@@ -29,6 +29,6 @@ while ($row =$result->fetch_assoc()){
     echo "<td>".$row["year"]."</td>";
     echo "</tr>";
 }    
-echo "</table>";
+echo "</table></div>";
 
 include_once 'footer.php';
