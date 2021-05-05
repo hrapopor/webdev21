@@ -20,12 +20,14 @@ if (isset($_POST["submit"])) {
     $ISBN = sanitizeMySQL($conn, $_POST['ISBN']);
     $year = sanitizeMySQL($conn, $_POST['year']);
     if (empty($_POST['month'])){
-        $month = '00';
+        // Default to January because need a valid month for webserver
+        $month = '01';
     } else{
         $month = sanitizeMySQL($conn, $_POST['month']);
     }
     if (empty($_POST['day'])){
-        $day = '00';
+        // Default to 01 because need a valid date for webserver
+        $day = '01';
     } else {
         $month = sanitizeMySQL($conn, $_POST['month']);
     }
