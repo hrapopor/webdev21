@@ -1,0 +1,57 @@
+*{
+    font-family: 'Raleway', sans-serif;}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.logo img { display: inline-block;
+    float: left;
+    padding: 10px 10px 10px 10px;
+    border-radius: 50%;
+}
+.top { display: inline-block;
+    padding-top: 50px;
+}
+.menu {
+    display: inline-block;
+    background-color: rgb(65, 141, 192);
+}
+.menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li { 
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+} 
+.menu a {
+    text-decoration: none;
+  }  
+.menu a:hover {
+    background-color: #ddd;
+    color: rgb(45, 182, 164);
+  }
+
+table, th, td {border: 1px solid black; border-collapse: collapse;}
+table {width: 75%;}
+tr:nth-child(even){background-color: #BFBFBF;}
+
+.addleft{
+   display: inline-block;
+   width: 40%;
+}
+.addright {
+    display: inline-block;
+    width: 40%;
+}
+fieldset {
+    padding-left: 10px;
+}
