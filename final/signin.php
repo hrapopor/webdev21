@@ -37,7 +37,7 @@ if (isset ($_POST['submit'])) {
 ?>
 <fieldset style="width:30%">
 <legend>Log-in</legend>
-<form method="POST" action="">
+<form method="POST" action="signin.php">
     Username:<br><input type="text" name="username" size="40"><br>
     Password:<br><input type="password" name="password" size="40"><br>
 <input type="submit" name="submit" value="Log In">
