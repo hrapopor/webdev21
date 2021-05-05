@@ -44,10 +44,9 @@ if (isset($_POST["submit"])) {
         $message_book = "<p>Successfully added new book titled $title! With Book ID: $book_id </p>";  
     }
     $fname = sanitizeMySQL($conn, $_POST['fname']);
-    $mname = sanitizeMySQL($conn, $_POST['mname']);
     $lname = sanitizeMySQL($conn, $_POST['lname']);
 
-    $query_author = "INSERT INTO `author` VALUES(NULL, \"$fname\",  \"$lname\", \"$mname\")";
+    $query_author = "INSERT INTO `author` VALUES(NULL, \"$fname\", \"$lname\")";
     $result_author = $conn->query($query_author);
     if(!$result_author){
         die("Database access failed: ".$conn->error);
@@ -76,7 +75,6 @@ if (isset($message_author)) echo $message_author."<br>";
     <legend>Add a Book</legend>    
     Book Title:*<br><input type="text" name="title" required><br>
     Author First Name:<br><input type="text" name="fname"><br>
-    Author Middle Name:<br><input type="text" name="mname"><br>
     Author Last Name:*<br><input type="text" name="lname" required><br>
     ISBN:*<br><input type="text" name="ISBN" maxlength="13" size="13" required><br>
     Publication Date:*<br><input type="number" name="year" maxlength="4" minlength="4" size="4" placeholder="yyyy" required> <input type="number" name="month" maxlength="2" minlength="2" size="2" max="12" placeholder="mm"> <input type="number" name="day" maxlength="2" minlength="2" size="2" max="31" placeholder="dd"><br>
