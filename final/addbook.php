@@ -72,7 +72,7 @@ if (isset($_POST["submit"])) {
 if (isset($message_book)) echo $message_book."<br>";
 if (isset($message_author)) echo $message_author."<br>";
 ?>
-<form method="POST" action="">
+<form method="POST" action="addbook.php">
     <fieldset>
     <legend>Add a Book</legend>    
     Book Title:*<br><input type="text" name="title" required><br>
