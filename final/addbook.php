@@ -89,7 +89,7 @@ if (isset($message_author)) echo $message_author."<br>";
 </div>
 <div class='addright'>
     <h3>Adding a Book to the database</h3>
-    <p class='add'>Use this form fields to enter a book to add to the database. It can be used for books with only one author. If your book has more than one author, please contact database adminstrator: <a href="mailto:hrapopor@pratt.edu">hrapopor@pratt.edu</a> </p>
+    <p class='add'>Use this form fields to enter a book to add to the database. <p>If the author is a corporate body, use the Author Last Name Field.</p> <p>If the author has a middle name or initial, include it in the Author First Name Field.</p> This form can be used for books with only one author. If your book has more than one author, please contact the database adminstrator: <a href="mailto:hrapopor@pratt.edu">hrapopor@pratt.edu.</a> </p>
 </div>
 </div>
 <?php
